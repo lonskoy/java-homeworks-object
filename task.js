@@ -8,11 +8,11 @@ Student.prototype.setSubject = function (subjectName) {
      this.subjectName = subjectName;
 }
 
-Student.prototype.addMark = function(mark) {
-  if(this.mark === undefined){ 
-    this.mark = [mark];
+Student.prototype.addMark = function(marks) {
+  if(this.marks === undefined){ 
+    this.marks = [marks];
     } else {
-      this.mark.push(mark);
+      this.marks.push(marks);
     }
 }
 
@@ -29,7 +29,7 @@ Student.prototype.getAverage = function() {
       for(let i = 0; i < marks.length; i++) {
         sum += marks[i];
       }
-    return sum/marks.length;
+    return sum / marks.length;
   }
 
   Student.prototype.exclude = function(reason) {
